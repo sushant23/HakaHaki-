@@ -1,0 +1,655 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Haka-Haki | Monthley Magazine | NEFEJ</title>
+<meta name="keywords" content="secured theme, 0 template, templatemo, red layout" />
+<meta name="description" content="Secured Theme is provided by templatemo.com" />
+<link href="templatemo_style.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="style.css" />
+<script src="js/jquery.js"></script>
+<link rel="stylesheet" href="js/jquery-ui.css" />
+<script src="js/jquery-ui.js"></script>
+<!-- Add mousewheel plugin (this is optional) -->
+<script type="text/javascript" src="fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+
+<!-- Add fancyBox main JS and CSS files -->
+<script type="text/javascript" src="fancybox/source/jquery.fancybox.js?v=2.1.5"></script>
+<link rel="stylesheet" type="text/css" href="fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+
+<!-- Add Button helper (this is optional) -->
+<link rel="stylesheet" type="text/css" href="fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" />
+<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+
+<!-- Add Thumbnail helper (this is optional) -->
+<link rel="stylesheet" type="text/css" href="fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" />
+<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+
+<!-- Add Media helper (this is optional) -->
+<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+
+
+
+<script type="text/javascript">
+    var firstTurn = true;
+    function swapImages(){
+        
+        
+        if(firstTurn){
+            $(".first").css("display","none");
+            $(".second").css("display","inline-block");
+            $(".second").css("opacity",0);
+            $(".first").fadeOut();  
+            $(".second").fadeTo(3000,1);
+            firstTurn = false;
+        } else {
+            $(".first").css("display","inline-block");
+            $(".second").css("display","none");
+            $(".first").css("opacity",0);
+            $(".first").fadeTo(3000,1);
+            $(".second").fadeOut();
+            firstTurn = true;
+        }
+
+    }
+    $(document).ready(function(){   
+        $(".second").css("display","none");
+        setInterval('swapImages()', 6000);
+        
+        $( ".sidebarlink" ).mouseenter(function() {
+          $(this).find("img").animate({width:"155px"},500);
+          $( this ).next().css("top",$(this).height()/2);
+          $( this ).next().css("visibility","visible");
+        });
+        $( ".sidebarlink" ).mouseleave(function(){
+            $(this).find("img").animate({width:"110px"},500);
+            $( this ).next().css("visibility","hidden");
+            });
+        
+        
+        $("#showFirstPagePopup").fancybox({
+            'autoSize'      :false,
+                'fitToView'     :false,
+            'autoScale'     : false,
+            'transitionIn'  : 'none',
+            'transitionOut' : 'none',
+            'type'          : 'iframe',
+            'height'        : 410
+
+        }).trigger('click');
+        
+        $(".pdf").click(function(){
+         $.fancybox({
+           width:"100%",
+           type: 'html',
+           autoSize: false,
+           content: '<embed src="'+this.href+'#nameddest=self&page=1&view=FitH,0&zoom=80,0,0" type="text/html" height="99%" width="100%" />',
+           beforeClose: function() {
+             $(".fancybox-inner").unwrap();
+           }
+         }); //fancybox
+         return false;
+        });
+        
+    });
+
+</script>
+
+<link rel="stylesheet" type="text/css" href="css/ddsmoothmenu.css" />
+
+<script type="text/javascript" src="js/ddsmoothmenu.js">
+
+/***********************************************
+* Smooth Navigational Menu- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
+***********************************************/
+
+</script>
+
+<script type="text/javascript">
+
+ddsmoothmenu.init({
+    mainmenuid: "templatemo_menu", //menu DIV id
+    orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+    classname: 'ddsmoothmenu', //class added to menu's outer DIV
+    customtheme: ["#1c5a80", "#18374a"],
+    contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+});
+
+function clearText(field)
+{
+    if (field.defaultValue == field.value) field.value = '';
+    else if (field.value == '') field.value = field.defaultValue;
+}
+
+</script>
+
+<link rel="stylesheet" href="css/slimbox2.css" type="text/css" media="screen" /> 
+<script type="text/JavaScript" src="js/slimbox2.js"></script>
+<style type="text/css">
+<!--
+.style3 {font-size: 12px; font-weight: bold; color: #771201; }
+-->
+</style>
+</head>
+<body>+
+
+<!-- AddThis Smart Layers BEGIN -->
+<!-- Go to http://www.addthis.com/get/smart-layers to customize -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5354c46c051ba88c"></script>
+<script type="text/javascript">
+  addthis.layers({
+    'theme' : 'transparent',
+    'share' : {
+      'position' : 'right',
+      'numPreferredServices' : 5
+    },  
+    'whatsnext' : {},  
+    'recommended' : {} 
+  });
+</script>
+<!-- AddThis Smart Layers END -->
+ 
+<div id = "sidebar "style="display: table; height: 100%; #position: relative; overflow: hidden; position:fixed;  z-index:999">
+  <div style=
+    " #position: absolute; #top: 50%;display: table-cell; vertical-align: middle;">
+    <div style=" #position: relative; #top: -50%"; >
+        <div style="display:table"><a href="#" target="_blank" class="sidebarlink" id="ankhisidebarlink"><img src="images/aankhijhyalsidebar.png" style="width:110px"/></a><span style="visibility:hidden; font-size:15px; display:table-cell; vertical-align:middle; padding-left:20px">&nbsp;</span></div>
+        <div style="display:table"><a href="http://www.radiosagarmatha.org.np" target="_blank" class="sidebarlink" id="sagsidebarlink"><img src="images/sagarmathasidebar.png" style="width:110px"/></a><span style="visibility:hidden ; font-size:15px; display:table-cell; vertical-align:middle; padding-left:20px">&nbsp;</span></div>
+      <div style="display:table"><a href="http://www.nayapusta.org" target="_blank" class="sidebarlink" id="pustasidebarlink"><img src="images/nayapustasidebar.png"style="width:110px" /></a><span style="visibility:hidden; font-size:15px; display:table-cell; vertical-align:middle; padding-left:20px ">&nbsp;</span></div>
+      <div style="display:table"><a href="#" target="_blank" class="sidebarlink" id="bagmatisidebarlink"><img src="images/bijogbagmati.png" style="width:110px"/></a><span style="visibility:hidden ; font-size:15px; display:table-cell; vertical-align:middle ; padding-left:20px">&nbsp;</span></div>
+        
+    </div>
+  </div>
+</div>
+
+<a href="firstpagepopup.html" id="showFirstPagePopup" style="visibility:hidden"></a>
+<div id="header"></div>
+<div class="wrapper col0">
+  <div id="topline">
+    <p>Tel: +977-01-5535342 | Fax: +977-01-5532033 | Mail: info@hakahaki.org, nefej@mos.com.np</p>
+    <ul>
+      <li><a href="#">परीक्षण शब्द</a></li>
+      <li><a href="#">परीक्षण शब्द</a></li>
+      <li><a href="#">परीक्षण शब्द</a></li>
+      <li class="last"><a href="#">परीक्षण शब्द</a></li>
+    </ul>
+    <br class="clear" />
+  </div>
+</div>
+<div id="templatemo_wrapper">
+    <div id="templatemo_header">
+        <div id="site_title"><a href="http://www.hakahaki.org" rel="nofollow">Secured Theme</a></div>
+        <div id="templatemo_search">
+          <div align="right"><a href="http://www.nefej.org"><br />
+                <img src="images/nefej.png" alt="RSS" /></a>
+                </div>
+                
+        </div>
+    </div> <!-- END of header -->
+
+
+         <div id="templatemo_menu" class="ddsmoothmenu" style="margin:auto; width:980px">
+            <ul>
+                <li><a href="index.html" class="selected">गृह पृष्ठ</a></li>
+                <li><a href="news.html">समाचार</a>
+                    <ul>
+                        <li><a href="news.html">विषयवस्तु एक</a></li>
+                        <li><a href="news.html">विषयवस्तु दुर्इ</a></li>
+                        <li><a href="news.html">विषयवस्तु तीन</a></li>
+                        <li><a href="news.html">विषयवस्तु चार</a></li>
+                        <li><a href="news.html">विषयवस्तु पाँच</a></li>                                                                        
+                  </ul>
+                </li>
+                <li><a href="gallery.html">तस्बिर संग्रह</a></li>
+                <li><a href="about.html">हाम्रो बारेमा</a></li> 
+                <li><a href="contact.html">अन्य</a></li>                
+                <li class="last"><a href="contact.html" class="last">सम्पर्क</a></li>
+            </ul>
+            <br style="clear: left" />
+        </div> <!-- end of templatemo_menu -->
+        
+    <!-- it works the same with all jquery version from 1.x to 2.x -->
+    
+    <!-- use jssor.slider.mini.js (39KB) or jssor.sliderc.mini.js (31KB, with caption, no slideshow) or jssor.sliders.mini.js (26KB, no caption, no slideshow) instead for release -->
+    <!-- jssor.slider.mini.js = jssor.sliderc.mini.js = jssor.sliders.mini.js = (jssor.core.js + jssor.utils.js + jssor.slider.js) -->
+    <script type="text/javascript" src="js/jssor.core.js"></script>
+    <script type="text/javascript" src="js/jssor.utils.js"></script>
+    <script type="text/javascript" src="js/jssor.slider.js"></script>
+    <script>
+
+        jQuery(document).ready(function ($) {
+            var options = {
+                $AutoPlay: true,                                    //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
+                $AutoPlaySteps: 1,                                  //[Optional] Steps to go for each navigation request (this options applys only when slideshow disabled), the default value is 1
+                $AutoPlayInterval: 4000,                            //[Optional] Interval (in milliseconds) to go for next slide since the previous stopped if the slider is auto playing, default value is 3000
+                $PauseOnHover: 1,                               //[Optional] Whether to pause when mouse over if a slider is auto playing, 0 no pause, 1 pause for desktop, 2 pause for touch device, 3 pause for desktop and touch device, default value is 1
+
+                $ArrowKeyNavigation: true,                          //[Optional] Allows keyboard (arrow key) navigation or not, default value is false
+                $SlideDuration: 500,                                //[Optional] Specifies default duration (swipe) for slide in milliseconds, default value is 500
+                $MinDragOffsetToSlide: 20,                          //[Optional] Minimum drag offset to trigger slide , default value is 20
+                //$SlideWidth: 955,                                 //[Optional] Width of every slide in pixels, default value is width of 'slides' container
+                //$SlideHeight: 280,                                //[Optional] Height of every slide in pixels, default value is height of 'slides' container
+                $SlideSpacing: 5,                                   //[Optional] Space between each slide in pixels, default value is 0
+                $DisplayPieces: 1,                                  //[Optional] Number of pieces to display (the slideshow would be disabled if the value is set to greater than 1), the default value is 1
+                $ParkingPosition: 0,                                //[Optional] The offset position to park slide (this options applys only when slideshow disabled), default value is 0.
+                $UISearchMode: 1,                                   //[Optional] The way (0 parellel, 1 recursive, default value is 1) to search UI components (slides container, loading screen, navigator container, arrow navigator container, thumbnail navigator container etc).
+                $PlayOrientation: 1,                                //[Optional] Orientation to play slide (for auto play, navigation), 1 horizental, 2 vertical, default value is 1
+                $DragOrientation: 3,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
+
+                $ThumbnailNavigatorOptions: {
+                    $Class: $JssorThumbnailNavigator$,              //[Required] Class to create thumbnail navigator instance
+                    $ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
+
+                    $Loop: 2,                                       //[Optional] Enable loop(circular) of carousel or not, 0: stop, 1: loop, 2 rewind, default value is 1
+                    $AutoCenter: 3,                                 //[Optional] Auto center thumbnail items in the thumbnail navigator container, 0 None, 1 Horizontal, 2 Vertical, 3 Both, default value is 3
+                    $Lanes: 1,                                      //[Optional] Specify lanes to arrange thumbnails, default value is 1
+                    $SpacingX: 4,                                   //[Optional] Horizontal space between each thumbnail in pixel, default value is 0
+                    $SpacingY: 4,                                   //[Optional] Vertical space between each thumbnail in pixel, default value is 0
+                    $DisplayPieces: 4,                              //[Optional] Number of pieces to display, default value is 1
+                    $ParkingPosition: 0,                            //[Optional] The offset position to park thumbnail
+                    $Orientation: 2,                                //[Optional] Orientation to arrange thumbnails, 1 horizental, 2 vertical, default value is 1
+                    $DisableDrag: false                             //[Optional] Disable drag or not, default value is false
+                }
+            };
+
+            var jssor_slider1 = new $JssorSlider$("slider1_container", options);
+
+            //responsive code begin
+            //you can remove responsive code if you don't want the slider scales while window resizes
+            function ScaleSlider() {
+                var parentWidth = jssor_slider1.$Elmt.parentNode.clientWidth;
+                if (parentWidth) {
+                    var sliderWidth = parentWidth;
+
+                    //keep the slider width no more than 810
+                    sliderWidth = Math.min(sliderWidth, 950);
+
+                    jssor_slider1.$SetScaleWidth(sliderWidth);
+                }
+                else
+                    window.setTimeout(ScaleSlider, 30);
+            }
+
+            ScaleSlider();
+
+            if (!navigator.userAgent.match(/(iPhone|iPod|iPad|BlackBerry|IEMobile)/)) {
+                $(window).bind('resize', ScaleSlider);
+            }
+
+
+            //if (navigator.userAgent.match(/(iPhone|iPod|iPad)/)) {
+            //    $(window).bind("orientationchange", ScaleSlider);
+            //}
+            //responsive code end
+        });
+    </script>
+    <!-- Jssor Slider Begin -->
+    <!-- You can move inline styles (except 'top', 'left', 'width' and 'height') to css file or css block. -->
+    <div id="slider1_container" style="position: relative; top: 0px; left: 0px; width: 980px !important; height: 302px !important; background: #000; overflow: hidden; margin:auto">
+
+        <!-- Loading Screen -->
+        <div u="loading" style="position: absolute; top: 0px; left: 0px;">
+            <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
+                background-color: #000000; top: 0px; left: 0px;width: 100%;height:100%;">
+            </div>
+            <div style="position: absolute; display: block; background: url(../img/loading.gif) no-repeat center center;
+                top: 0px; left: 0px;width: 100%;height:100%;">
+            </div>
+        </div>
+
+        <!-- Slides Container -->
+        <div u="slides" style="cursor: move; position: absolute; left: 25px; width: 660px; height: 300px; top:15px;
+            overflow: hidden;">
+            <div>
+                <img src="images/slider/002.jpg" />
+                <div u="thumb">
+                    <img class="i" src="images/slider/002.jpg" /><div class="t">Image Gallery</div>
+                    <div class="c">This is a test text</div>
+                </div>
+            </div>
+            <div>
+                <img src="images/slider/003.jpg" />
+                <div u="thumb">
+                    <img class="i" src="images/slider/003.jpg" /><div class="t">Image Gallery</div>
+                    <div class="c">This is a test text</div>
+                </div>
+            </div>
+            <div>
+                <img src="images/slider/004.jpg" />
+                <div u="thumb">
+                    <img class="i" src="images/slider/004.jpg" /><div class="t">Image Gallery</div>
+                    <div class="c">This is a test text</div>
+                </div>
+            </div>
+            <div>
+                <img src="images/slider/001.jpg" />
+                <div u="thumb">
+                    <img class="i" src="images/slider/001.jpg" /><div class="t">Image Gallery</div>
+                    <div class="c">This is a test text</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- ThumbnailNavigator Skin Begin -->
+        <div u="thumbnavigator" class="jssort11" style="position: absolute; width: 295px; height: 180px; left:690px; top:65px">
+            <!-- Thumbnail Item Skin Begin -->
+            <style>
+                /* jssor slider thumbnail navigator skin 11 css */
+                /*
+                .jssort11 .p            (normal)
+                .jssort11 .p:hover      (normal mouseover)
+                .jssort11 .pav          (active)
+                .jssort11 .pav:hover    (active mouseover)
+                .jssort11 .pdn          (mousedown)
+                */
+                .jssort11
+                {
+                    font-family: Arial, Helvetica, sans-serif;
+                }
+                .jssort11 .i, .jssort11 .pav:hover .i
+                {
+                    position: absolute;
+                    top:3px;
+                    left:3px;
+                    WIDTH: 60px;
+                    HEIGHT: 30px;
+                    border: white 1px dashed;
+                }
+                * html .jssort11 .i
+                {
+                    WIDTH /**/: 62px;
+                    HEIGHT /**/: 32px;
+                }
+                .jssort11 .pav .i
+                {
+                    border: white 1px solid;
+                }
+                .jssort11 .t, .jssort11 .pav:hover .t
+                {
+                    position: absolute;
+                    top: 3px;
+                    left: 68px;
+                    width:129px;
+                    height: 32px;
+                    line-height:32px;
+                    text-align: center;
+                    color:#fc9835;
+                    font-size:13px;
+                    font-weight:700;
+                }
+                .jssort11 .pav .t, .jssort11 .phv .t, .jssort11 .p:hover .t
+                {
+                    color:#fff;
+                }
+                .jssort11 .c, .jssort11 .pav:hover .c
+                {
+                    position: absolute;
+                    top: 38px;
+                    left: 3px;
+                    width:197px;
+                    height: 31px;
+                    line-height:31px;
+                    color:#fff;
+                    font-size:11px;
+                    font-weight:400;
+                    overflow: hidden;
+                }
+                .jssort11 .pav .c, .jssort11 .phv .c, .jssort11 .p:hover .c
+                {
+                    color:#fc9835;
+                }
+                .jssort11 .t, .jssort11 .c
+                {
+                    transition: color 2s;
+                    -moz-transition: color 2s;
+                    -webkit-transition: color 2s;
+                    -o-transition: color 2s;
+                }
+                .jssort11 .p:hover .t, .jssort11 .phv .t, .jssort11 .pav:hover .t, .jssort11 .p:hover .c, .jssort11 .phv .c, .jssort11 .pav:hover .c
+                {
+                    transition: none;
+                    -moz-transition: none;
+                    -webkit-transition: none;
+                    -o-transition: none;
+                }
+                .jssort11 .p
+                {
+                    background:#181818;
+                }
+                .jssort11 .pav, .jssort11 .pdn
+                {
+                    background:#462300;
+                }
+                .jssort11 .p:hover, .jssort11 .phv, .jssort11 .pav:hover
+                {
+                    background:#333;
+                }
+            </style>
+            <div u="slides" style="cursor: move;">
+                <div u="prototype" class="p" style="position: absolute; width: 295px; height: 68px; top: 0; left: 0;">
+                    <thumbnailtemplate style=" width: 100%; height: 100%; border: none;position:absolute; top: 0; left: 0;"></thumbnailtemplate>
+                </div>
+            </div>
+            <!-- Thumbnail Item Skin End -->
+        </div>
+        <!-- ThumbnailNavigator Skin End -->
+        <a style="display: none" href="http://www.jssor.com">jQuery</a>
+    </div>
+    <!-- Jssor Slider End -->
+
+    </div>
+    <div id="templatemo_main" style="margin:auto; width:900px; padding-top:0px">
+        <div class="content_wrapper content_mb_30">
+            <div class="col_3 service_home" style="padding-top:30px">
+              <div align="center"><img src="images/tathya_thatyanka.png" width="186" height="48" />
+              </div>
+              <p>परीक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परीक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परीक्षण शब्द</p>
+              <p align="right" class="readmore"><a href="#">पूरा पढ्नुहोस् &raquo;</a></p>
+          </div>
+            <div class="col_3 service_home" style="padding-top:30px">
+              <div align="center"><img src="images/janata_sarokar.png" width="229" height="48" />
+              </div>
+              <p>परीक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परीक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परीक्षण शब्द</p>
+              <p align="right" class="readmore"><a href="#">पूरा पढ्नुहोस् &raquo;</a></p>
+          </div>
+          <div class="col_3 no_margin_right service_home" style="padding-top:30px; background-color:#3CB2D0; color:#FFFFFF">
+              <div align="center"><img src="images/face-to-face-edition.png" width="270" height="48" />             </div>
+                <p>Demo Text will update. Demo Text will update. Demo Text will update. Demo Text will update. Demo Text will update.</p>
+                <p align="right" class="readmore" ><a href="#" style="color:#000000">Read More&raquo;</a></p>
+          </div>
+          <div class="col_3 service_home">
+              <div align="center"><img src="images/janata_bhanai.png" width="186" height="48" />
+              </div>
+              <p>परीक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परीक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परीक्षण शब्द</p>
+              <p align="right" class="readmore"><a href="#">पूरा पढ्नुहोस् &raquo;</a></p>
+          </div>
+            <div class="col_3 service_home">
+              <div align="center"><img src="images/janata_sarokar.png" width="229" height="48" />
+              </div>
+              <p>परीक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परीक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परीक्षण शब्द</p>
+              <p align="right" class="readmore"><a href="#">पूरा पढ्नुहोस् &raquo;</a></p>
+          </div>
+            <div class="col_3 no_margin_right service_home">
+                <div align="center"><img src="images/janata_bhanai.png" alt="Image" />
+              </div>
+                <p>परीक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परीक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परीक्षण शब्द</p>
+              <p align="right" class="readmore"><a href="#">पूरा पढ्नुहोस् &raquo;</a></p>
+          </div>
+        </div>
+        <!-- ####################################################################################################### -->
+        <div class="wrapper">
+  <div class="container">
+    <div class="content">
+      <div id="hpage_latest">
+
+        <ul>
+          
+          <li><img src="images/190x130.gif" alt="" />
+          
+            <p><span class="style3">परीक्षण टाइटल परिक्षण टाइटल परिक्षण टाइटल परिक्षण टाइटल परिक्षण टाइटल</span><br /> 
+              परिक्षण शब्द परीक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण<br /> 
+              <p>शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्दपरीक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण<br />
+                <p>शब्द परीक्षण शब्द परिक्षण शब्द परिक्षण</p>
+              <p class="readmore"><a href="#">पूरा पढ्नुहोस् &raquo;</a></p>
+          </li>
+          <li><img src="images/190x130.gif" alt="" />
+            <p><span class="style3">परीक्षण टाइटल परिक्षण टाइटल परिक्षण टाइटल परिक्षण टाइटल परिक्षण टाइटल</span><br />
+परिक्षण शब्द परीक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण<br />
+</p>
+            <p>शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्दपरीक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण<br />
+            </p>
+            <p>शब्द परीक्षण शब्द परिक्षण शब्द परिक्षण</p>
+            <p class="readmore"><a href="#">पूरा पढ्नुहोस् &raquo;</a></p>
+          </li>
+          </ul>
+        <br class="clear" />
+      </div>
+    </div>
+    <div class="content">
+      <div id="hpage_latest">
+          <ul>
+
+          <li><a class="pdf" href="pdf/sample.pdf"><img src="images/e-paper - haka-haki.png" width="190" height="55" /><img src="images/haka-haki-front.png" /></a>
+            <p class="readmore"><a href="hakahaki_pdf.html">थप पढ्नुहोस् &raquo;</a></p>
+            </li>
+          
+          <li><a class="pdf" href="pdf/sample.pdf"><img src="images/e-paper - face-to-face.png" width="190" height="55" /><img src="images/face-2-face-front.png" /></a>
+            <p class="readmore"><a href="face-to-face_pdf.html">Read More &raquo;</a></p>
+            </li>
+          </ul>
+        <br class="clear" />
+      </div>
+    </div>
+    <div id="hpage_cats">
+    <div class="fl_left"><br />
+      <img src="images/100x100.gif" alt="" />
+      <h2>
+        <p><a href="#">परीक्षण टाइटल</a></p>
+      </h2>
+      <p>This is a W3C standards compliant free website template from <a href="http://www.os-templates.com/">OS Templates</a>. For more CSS templates visit <a href="http://www.os-templates.com/">Free Website Templates</a>. Condimentumfelis et amet tellent quisquet a leo lacus nec augue accumsan sagittislaorem dolor sum at urna.</p>
+      </div>
+      <div class="column">
+    </div>
+    <div class="fl_left"><br />
+      <img src="images/100x100.gif" alt="" />
+      <h2><p><a href="#">परीक्षण टाइटल</a></p>
+      </h2>
+      <p>This is a W3C standards compliant free website template from <a href="http://www.os-templates.com/">OS Templates</a>. For more CSS templates visit <a href="http://www.os-templates.com/">Free Website Templates</a>. Condimentumfelis et amet tellent quisquet a leo lacus nec augue accumsan sagittislaorem dolor sum at urna.</p>
+      </div>
+</div>
+
+
+<!-- ####################################################################################################### -->
+      <div class="col_2 no_margin_right">
+
+                <h2>हाका-हाकी प्रतिक्रिया</h2>
+                <div class="news_list">
+                    <span class="first"><img src="images/templatemo_image_03.jpg" alt="Client 3" class="img_fl img_border img_border_s" /><a href="#">Sed euismod dolor eu</a>
+                    <p>Aliquam erat volutpat. Vestibulum urna libero, fringilla eu faucibus nec, fringilla eget elit.</p></span>
+                    <span class="second"><img src="images/templatemo_image_01.jpg" alt="Client 1"  class="img_fl img_border img_border_s" /><a href="#">Sed euismod dolor eu</a>
+                    <p>Aliquam erat volutpat. Vestibulum urna libero, fringilla eu faucibus nec, fringilla eget elit.</p></span>
+                    <div class="clear"></div>
+                </div>           
+                <div class="news_list">
+                    <span class="first"><img src="images/templatemo_image_03.jpg" alt="Client 3" class="img_fl img_border img_border_s" /><a href="#">Sed euismod dolor eu</a>
+                    <p>Aliquam erat volutpat. Vestibulum urna libero, fringilla eu faucibus nec, fringilla eget elit.</p></span>
+                    <span class="second"><img src="images/templatemo_image_01.jpg" alt="Client 1"  class="img_fl img_border img_border_s" /><a href="#">Sed euismod dolor eu</a>
+                    <p>Aliquam erat volutpat. Vestibulum urna libero, fringilla eu faucibus nec, fringilla eget elit.</p></span>
+                  <div class="clear"></div>
+                </div>   
+                 <div class="news_list">
+                    <span class="first"><img src="images/templatemo_image_03.jpg" alt="Client 3" class="img_fl img_border img_border_s" /><a href="#">Sed euismod dolor eu</a>
+                    <p>Aliquam erat volutpat. Vestibulum urna libero, fringilla eu faucibus nec, fringilla eget elit.</p></span>
+                    <span class="second"><img src="images/templatemo_image_01.jpg" alt="Client 1"  class="img_fl img_border img_border_s" /><a href="#">Sed euismod dolor eu</a>
+                    <p>Aliquam erat volutpat. Vestibulum urna libero, fringilla eu faucibus nec, fringilla eget elit.</p></span>
+                    
+                    <div class="clear"></div>
+                </div>               
+                <div class="clear"></div>
+                <a href="testimonials.html" class="more">More</a>
+      </div>
+            <div class="col_2 no_margin_right">
+
+                <h2>परीक्षण टाइटल</h2>
+          <div class="news_list">
+                    <span class="first"><img src="images/templatemo_image_03.jpg" alt="Client 3" class="img_fl img_border img_border_s" /><a href="#">Sed euismod dolor eu</a>
+                    <p>Aliquam erat volutpat. Vestibulum urna libero, fringilla eu faucibus nec, fringilla eget elit.</p></span>
+                    <span class="second"><img src="images/templatemo_image_01.jpg" alt="Client 1"  class="img_fl img_border img_border_s" /><a href="#">Sed euismod dolor eu</a>
+                    <p>Aliquam erat volutpat. Vestibulum urna libero, fringilla eu faucibus nec, fringilla eget elit.</p></span>
+                    <div class="clear"></div>
+                </div>           
+                <div class="news_list">
+                    <span class="first"><img src="images/templatemo_image_03.jpg" alt="Client 3" class="img_fl img_border img_border_s" /><a href="#">Sed euismod dolor eu</a>
+                    <p>Aliquam erat volutpat. Vestibulum urna libero, fringilla eu faucibus nec, fringilla eget elit.</p></span>
+                    <span class="second"><img src="images/templatemo_image_01.jpg" alt="Client 1"  class="img_fl img_border img_border_s" /><a href="#">Sed euismod dolor eu</a>
+                    <p>Aliquam erat volutpat. Vestibulum urna libero, fringilla eu faucibus nec, fringilla eget elit.</p></span>
+                  <div class="clear"></div>
+                </div>   
+                 <div class="news_list">
+                    <span class="first"><img src="images/templatemo_image_03.jpg" alt="Client 3" class="img_fl img_border img_border_s" /><a href="#">Sed euismod dolor eu</a>
+                    <p>Aliquam erat volutpat. Vestibulum urna libero, fringilla eu faucibus nec, fringilla eget elit.</p></span>
+                    <span class="second"><img src="images/templatemo_image_01.jpg" alt="Client 1"  class="img_fl img_border img_border_s" /><a href="#">Sed euismod dolor eu</a>
+                    <p>Aliquam erat volutpat. Vestibulum urna libero, fringilla eu faucibus nec, fringilla eget elit.</p></span>
+                    <div class="clear"></div>
+                </div>             
+                <div class="clear"></div>
+                <a href="#" class="more">More</a>
+      </div>
+    </div>
+        <div class="clear"></div>
+    </div>
+    </div>
+    
+    
+    <!-- ####################################################################################################### -->
+
+
+    <div id="templatemo_footer">
+        <div class="col_4">
+            <h4>Pages</h4>
+            <ul class="nobullet bottom_list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        
+        <div class="col_4">
+            <h4>Partners</h4>
+            <ul class="nobullet bottom_list">
+                <li><a href="#">Morbi eget lacus sem</a></li>
+                <li><a href="#">Vivamus dolor dolor</a></li>
+                <li><a href="#">Nunc auctor viverra</a></li>
+                <li><a href="#">Phasellus eget blandit</a></li>
+                <li><a href="#">Sed id tincidunt ipsum</a></li>
+            </ul>
+        </div>
+        
+        <div class="col_4">
+            <h4>Links</h4>
+            <ul class="nobullet bottom_list">
+                <li><a href="http://www.flashmo.com/page/1" rel="nofollow">Flash Templates</a></li>
+                <li><a href="#">Phasellus eget blandit</a></li>
+                <li><a href="#">Vestibulum laoreet</a></li>
+                <li><a href="#">Sed placerat est sit</a></li>
+                <li><a href="#">Class aptent taciti</a></li>
+            </ul>
+        </div>
+        
+        <div class="col_4 no_margin_right">
+            <h4>Facebook</h4>
+            <p><iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FHakaHaki-Nefej%2F541441692631688%3Fref%3Dhl&amp;width&amp;layout=standard&amp;action=like&amp;show_faces=true&amp;share=false&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:80px;" allowTransparency="true"></iframe></p>
+            
+        </div>
+        <div class="clear"></div>
+    </div> <!-- END of templatemo_footer -->
+</div> <!-- END of templatemo_wrapper -->
+<div id="templatemo_copyright_wrapper">
+    <div id="templatemo_copyright">
+        सर्वाधिकार © २०००-२०७१ <a href="#">नेपाल वातावरण पत्रकार समूह (NEFEJ)</a> |  वेबसाइट सृजनाः <a href="http://www.thedigiMed.net" target="_blank">DigiMed</a></div>
+</div>
+</body>
+</html>
