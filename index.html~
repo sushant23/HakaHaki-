@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Haka-Haki | Monthley Magazine | NEFEJ</title>
-<meta name="keywords" content="secured theme, 0 template, templatemo, red layout" />
+<meta name="keywords" content="secured theme, free template, templatemo, red layout" />
 <meta name="description" content="Secured Theme is provided by templatemo.com" />
 <link href="templatemo_style.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" type="text/css" href="style.css" />
@@ -30,67 +30,67 @@
 
 
 <script type="text/javascript">
-    var firstTurn = true;
-    function swapImages(){
-        
-        
-        if(firstTurn){
-            $(".first").css("display","none");
-            $(".second").css("display","inline-block");
-            $(".second").css("opacity",0);
-            $(".first").fadeOut();  
-            $(".second").fadeTo(3000,1);
-            firstTurn = false;
-        } else {
-            $(".first").css("display","inline-block");
-            $(".second").css("display","none");
-            $(".first").css("opacity",0);
-            $(".first").fadeTo(3000,1);
-            $(".second").fadeOut();
-            firstTurn = true;
-        }
+	var firstTurn = true;
+	function swapImages(){
+		
+		
+		if(firstTurn){
+			$(".first").css("display","none");
+			$(".second").css("display","inline-block");
+			$(".second").css("opacity",0);
+			$(".first").fadeOut();	
+			$(".second").fadeTo(3000,1);
+			firstTurn = false;
+		} else {
+			$(".first").css("display","inline-block");
+			$(".second").css("display","none");
+			$(".first").css("opacity",0);
+			$(".first").fadeTo(3000,1);
+			$(".second").fadeOut();
+			firstTurn = true;
+		}
 
-    }
-    $(document).ready(function(){   
-        $(".second").css("display","none");
-        setInterval('swapImages()', 6000);
-        
-        $( ".sidebarlink" ).mouseenter(function() {
-          $(this).find("img").animate({width:"155px"},500);
-          $( this ).next().css("top",$(this).height()/2);
-          $( this ).next().css("visibility","visible");
-        });
-        $( ".sidebarlink" ).mouseleave(function(){
-            $(this).find("img").animate({width:"110px"},500);
-            $( this ).next().css("visibility","hidden");
-            });
-        
-        
-        $("#showFirstPagePopup").fancybox({
-            'autoSize'      :false,
-                'fitToView'     :false,
-            'autoScale'     : false,
-            'transitionIn'  : 'none',
-            'transitionOut' : 'none',
-            'type'          : 'iframe',
-            'height'        : 410
+	}
+	$(document).ready(function(){	
+		$(".second").css("display","none");
+		setInterval('swapImages()', 6000);
+		
+		$( ".sidebarlink" ).mouseenter(function() {
+		  $(this).find("img").animate({width:"155px"},500);
+		  $( this ).next().css("top",$(this).height()/2);
+		  $( this ).next().css("visibility","visible");
+		});
+    	$( ".sidebarlink" ).mouseleave(function(){
+			$(this).find("img").animate({width:"110px"},500);
+			$( this ).next().css("visibility","hidden");
+			});
+		
+		
+		$("#showFirstPagePopup").fancybox({
+ 			'autoSize'      :false,
+		        'fitToView'     :false,
+			'autoScale'     : false,
+			'transitionIn'  : 'none',
+			'transitionOut' : 'none',
+			'type'          : 'iframe',
+			'height'        : 400
 
-        }).trigger('click');
-        
-        $(".pdf").click(function(){
-         $.fancybox({
-           width:"100%",
-           type: 'html',
-           autoSize: false,
-           content: '<embed src="'+this.href+'#nameddest=self&page=1&view=FitH,0&zoom=80,0,0" type="text/html" height="99%" width="100%" />',
-           beforeClose: function() {
-             $(".fancybox-inner").unwrap();
-           }
-         }); //fancybox
-         return false;
-        });
-        
-    });
+		}).trigger('click');
+		
+		$(".pdf").click(function(){
+		 $.fancybox({
+		   width:"100%",
+		   type: 'html',
+		   autoSize: false,
+		   content: '<embed src="'+this.href+'#nameddest=self&page=1&view=FitH,0&zoom=80,0,0" type="text/html" height="99%" width="100%" />',
+		   beforeClose: function() {
+			 $(".fancybox-inner").unwrap();
+		   }
+		 }); //fancybox
+		 return false;
+		});
+		
+	});
 
 </script>
 
@@ -109,11 +109,11 @@
 <script type="text/javascript">
 
 ddsmoothmenu.init({
-    mainmenuid: "templatemo_menu", //menu DIV id
-    orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
-    classname: 'ddsmoothmenu', //class added to menu's outer DIV
-    customtheme: ["#1c5a80", "#18374a"],
-    contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+	mainmenuid: "templatemo_menu", //menu DIV id
+	orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+	classname: 'ddsmoothmenu', //class added to menu's outer DIV
+	customtheme: ["#1c5a80", "#18374a"],
+	contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
 });
 
 function clearText(field)
@@ -154,7 +154,7 @@ function clearText(field)
   <div style=
     " #position: absolute; #top: 50%;display: table-cell; vertical-align: middle;">
     <div style=" #position: relative; #top: -50%"; >
-        <div style="display:table"><a href="#" target="_blank" class="sidebarlink" id="ankhisidebarlink"><img src="images/aankhijhyalsidebar.png" style="width:110px"/></a><span style="visibility:hidden; font-size:15px; display:table-cell; vertical-align:middle; padding-left:20px">&nbsp;</span></div>
+     	<div style="display:table"><a href="#" target="_blank" class="sidebarlink" id="ankhisidebarlink"><img src="images/aankhijhyalsidebar.png" style="width:110px"/></a><span style="visibility:hidden; font-size:15px; display:table-cell; vertical-align:middle; padding-left:20px">&nbsp;</span></div>
         <div style="display:table"><a href="http://www.radiosagarmatha.org.np" target="_blank" class="sidebarlink" id="sagsidebarlink"><img src="images/sagarmathasidebar.png" style="width:110px"/></a><span style="visibility:hidden ; font-size:15px; display:table-cell; vertical-align:middle; padding-left:20px">&nbsp;</span></div>
       <div style="display:table"><a href="http://www.nayapusta.org" target="_blank" class="sidebarlink" id="pustasidebarlink"><img src="images/nayapustasidebar.png"style="width:110px" /></a><span style="visibility:hidden; font-size:15px; display:table-cell; vertical-align:middle; padding-left:20px ">&nbsp;</span></div>
       <div style="display:table"><a href="#" target="_blank" class="sidebarlink" id="bagmatisidebarlink"><img src="images/bijogbagmati.png" style="width:110px"/></a><span style="visibility:hidden ; font-size:15px; display:table-cell; vertical-align:middle ; padding-left:20px">&nbsp;</span></div>
@@ -178,13 +178,13 @@ function clearText(field)
   </div>
 </div>
 <div id="templatemo_wrapper">
-    <div id="templatemo_header">
-        <div id="site_title"><a href="http://www.hakahaki.org" rel="nofollow">Secured Theme</a></div>
+	<div id="templatemo_header">
+    	<div id="site_title"><a href="http://www.hakahaki.org" rel="nofollow">Secured Theme</a></div>
         <div id="templatemo_search">
           <div align="right"><a href="http://www.nefej.org"><br />
                 <img src="images/nefej.png" alt="RSS" /></a>
                 </div>
-                
+            	
         </div>
     </div> <!-- END of header -->
 
@@ -225,12 +225,12 @@ function clearText(field)
                 $AutoPlayInterval: 4000,                            //[Optional] Interval (in milliseconds) to go for next slide since the previous stopped if the slider is auto playing, default value is 3000
                 $PauseOnHover: 1,                               //[Optional] Whether to pause when mouse over if a slider is auto playing, 0 no pause, 1 pause for desktop, 2 pause for touch device, 3 pause for desktop and touch device, default value is 1
 
-                $ArrowKeyNavigation: true,                          //[Optional] Allows keyboard (arrow key) navigation or not, default value is false
+                $ArrowKeyNavigation: true,   			            //[Optional] Allows keyboard (arrow key) navigation or not, default value is false
                 $SlideDuration: 500,                                //[Optional] Specifies default duration (swipe) for slide in milliseconds, default value is 500
                 $MinDragOffsetToSlide: 20,                          //[Optional] Minimum drag offset to trigger slide , default value is 20
                 //$SlideWidth: 955,                                 //[Optional] Width of every slide in pixels, default value is width of 'slides' container
                 //$SlideHeight: 280,                                //[Optional] Height of every slide in pixels, default value is height of 'slides' container
-                $SlideSpacing: 5,                                   //[Optional] Space between each slide in pixels, default value is 0
+                $SlideSpacing: 5, 					                //[Optional] Space between each slide in pixels, default value is 0
                 $DisplayPieces: 1,                                  //[Optional] Number of pieces to display (the slideshow would be disabled if the value is set to greater than 1), the default value is 1
                 $ParkingPosition: 0,                                //[Optional] The offset position to park slide (this options applys only when slideshow disabled), default value is 0.
                 $UISearchMode: 1,                                   //[Optional] The way (0 parellel, 1 recursive, default value is 1) to search UI components (slides container, loading screen, navigator container, arrow navigator container, thumbnail navigator container etc).
@@ -345,85 +345,85 @@ function clearText(field)
                 */
                 .jssort11
                 {
-                    font-family: Arial, Helvetica, sans-serif;
+                	font-family: Arial, Helvetica, sans-serif;
                 }
                 .jssort11 .i, .jssort11 .pav:hover .i
                 {
-                    position: absolute;
-                    top:3px;
-                    left:3px;
-                    WIDTH: 60px;
-                    HEIGHT: 30px;
-                    border: white 1px dashed;
+                	position: absolute;
+                	top:3px;
+                	left:3px;
+                	WIDTH: 60px;
+                	HEIGHT: 30px;
+                	border: white 1px dashed;
                 }
                 * html .jssort11 .i
                 {
-                    WIDTH /**/: 62px;
-                    HEIGHT /**/: 32px;
+                	WIDTH /**/: 62px;
+                	HEIGHT /**/: 32px;
                 }
                 .jssort11 .pav .i
                 {
-                    border: white 1px solid;
+                	border: white 1px solid;
                 }
                 .jssort11 .t, .jssort11 .pav:hover .t
                 {
-                    position: absolute;
-                    top: 3px;
-                    left: 68px;
-                    width:129px;
-                    height: 32px;
-                    line-height:32px;
-                    text-align: center;
-                    color:#fc9835;
-                    font-size:13px;
-                    font-weight:700;
+                	position: absolute;
+                	top: 3px;
+                	left: 68px;
+                	width:129px;
+                	height: 32px;
+                	line-height:32px;
+                	text-align: center;
+                	color:#fc9835;
+                	font-size:13px;
+                	font-weight:700;
                 }
                 .jssort11 .pav .t, .jssort11 .phv .t, .jssort11 .p:hover .t
                 {
-                    color:#fff;
+                	color:#fff;
                 }
                 .jssort11 .c, .jssort11 .pav:hover .c
                 {
-                    position: absolute;
-                    top: 38px;
-                    left: 3px;
-                    width:197px;
-                    height: 31px;
-                    line-height:31px;
-                    color:#fff;
-                    font-size:11px;
-                    font-weight:400;
-                    overflow: hidden;
+                	position: absolute;
+                	top: 38px;
+                	left: 3px;
+                	width:197px;
+                	height: 31px;
+                	line-height:31px;
+                	color:#fff;
+                	font-size:11px;
+                	font-weight:400;
+                	overflow: hidden;
                 }
                 .jssort11 .pav .c, .jssort11 .phv .c, .jssort11 .p:hover .c
                 {
-                    color:#fc9835;
+                	color:#fc9835;
                 }
                 .jssort11 .t, .jssort11 .c
                 {
-                    transition: color 2s;
+                	transition: color 2s;
                     -moz-transition: color 2s;
                     -webkit-transition: color 2s;
                     -o-transition: color 2s;
                 }
                 .jssort11 .p:hover .t, .jssort11 .phv .t, .jssort11 .pav:hover .t, .jssort11 .p:hover .c, .jssort11 .phv .c, .jssort11 .pav:hover .c
                 {
-                    transition: none;
+                	transition: none;
                     -moz-transition: none;
                     -webkit-transition: none;
                     -o-transition: none;
                 }
                 .jssort11 .p
                 {
-                    background:#181818;
+                	background:#181818;
                 }
                 .jssort11 .pav, .jssort11 .pdn
                 {
-                    background:#462300;
+                	background:#462300;
                 }
                 .jssort11 .p:hover, .jssort11 .phv, .jssort11 .pav:hover
                 {
-                    background:#333;
+                	background:#333;
                 }
             </style>
             <div u="slides" style="cursor: move;">
@@ -438,58 +438,43 @@ function clearText(field)
     </div>
     <!-- Jssor Slider End -->
 
-    </div>
+	</div>
     <div id="templatemo_main" style="margin:auto; width:900px; padding-top:0px">
-        <div class="content_wrapper content_mb_30">
-            <div class="col_3 service_home" style="padding-top:30px">
-              <div align="center"><img src="images/tathya_thatyanka.png" width="186" height="48" />
-              </div>
-              <p>परीक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परीक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परीक्षण शब्द</p>
-
-              <p align="right" class="readmore"><a href="thathya_thatyanka.html">पूरा पढ्नुहोस् &raquo;</a></p>
-
-
+    	<div class="content_wrapper content_mb_30">
+        	<div class="col_3 service_home" style="padding-top:30px">
+        	  <div align="center"><img src="images/tathya_thatyanka.png" width="186" height="48" />
+      	      </div>
+        	  <p>परीक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परीक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परीक्षण शब्द</p>
+              <p align="right" class="readmore"><a href="#">पूरा पढ्नुहोस् &raquo;</a></p>
           </div>
             <div class="col_3 service_home" style="padding-top:30px">
               <div align="center"><img src="images/janata_sarokar.png" width="229" height="48" />
               </div>
               <p>परीक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परीक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परीक्षण शब्द</p>
-
-              <p align="right" class="readmore"><a href="janata_sarokar.html">पूरा पढ्नुहोस् &raquo;</a></p>
-
+              <p align="right" class="readmore"><a href="#">पूरा पढ्नुहोस् &raquo;</a></p>
           </div>
           <div class="col_3 no_margin_right service_home" style="padding-top:30px; background-color:#3CB2D0; color:#FFFFFF">
-              <div align="center"><img src="images/face-to-face-edition.png" width="270" height="48" />             </div>
-                <p>Demo Text will update. Demo Text will update. Demo Text will update. Demo Text will update. Demo Text will update.</p>
-
-                <p align="right" class="readmore" ><a href="face-to-face-edition.html" style="color:#000000">Read More&raquo;</a></p>
-
+           	  <div align="center"><img src="images/face-to-face-edition.png" width="270" height="48" />       	    </div>
+            	<p>Demo Text will update. Demo Text will update. Demo Text will update. Demo Text will update. Demo Text will update.</p>
+                <p align="right" class="readmore" ><a href="#" style="color:#000000">Read More&raquo;</a></p>
           </div>
           <div class="col_3 service_home">
-              <div align="center"><img src="images/janata_bhanai.png" width="186" height="48" />
-              </div>
-              <p>परीक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परीक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परीक्षण शब्द</p>
-
-              <p align="right" class="readmore"><a href="janata_bhanai.html">पूरा पढ्नुहोस् &raquo;</a></p>
-
-
+        	  <div align="center"><img src="images/janata_bhanai.png" width="186" height="48" />
+      	      </div>
+        	  <p>परीक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परीक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परीक्षण शब्द</p>
+              <p align="right" class="readmore"><a href="#">पूरा पढ्नुहोस् &raquo;</a></p>
           </div>
             <div class="col_3 service_home">
               <div align="center"><img src="images/janata_sarokar.png" width="229" height="48" />
               </div>
               <p>परीक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परीक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परीक्षण शब्द</p>
-
-              <p align="right" class="readmore"><a href="janata_sarokar.html">पूरा पढ्नुहोस् &raquo;</a></p>
-
-
+              <p align="right" class="readmore"><a href="#">पूरा पढ्नुहोस् &raquo;</a></p>
           </div>
             <div class="col_3 no_margin_right service_home">
-                <div align="center"><img src="images/janata_bhanai.png" alt="Image" />
-              </div>
-                <p>परीक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परीक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परीक्षण शब्द</p>
-
-              <p align="right" class="readmore"><a href="janata_bhanai.html">पूरा पढ्नुहोस् &raquo;</a></p>
-
+            	<div align="center"><img src="images/janata_bhanai.png" alt="Image" />
+          	  </div>
+            	<p>परीक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परीक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परीक्षण शब्द</p>
+              <p align="right" class="readmore"><a href="#">पूरा पढ्नुहोस् &raquo;</a></p>
           </div>
         </div>
         <!-- ####################################################################################################### -->
@@ -564,7 +549,7 @@ function clearText(field)
                     <p>Aliquam erat volutpat. Vestibulum urna libero, fringilla eu faucibus nec, fringilla eget elit.</p></span>
                     <span class="second"><img src="images/templatemo_image_01.jpg" alt="Client 1"  class="img_fl img_border img_border_s" /><a href="#">Sed euismod dolor eu</a>
                     <p>Aliquam erat volutpat. Vestibulum urna libero, fringilla eu faucibus nec, fringilla eget elit.</p></span>
-                    <div class="clear"></div>
+                  	<div class="clear"></div>
                 </div>           
                 <div class="news_list">
                     <span class="first"><img src="images/templatemo_image_03.jpg" alt="Client 3" class="img_fl img_border img_border_s" /><a href="#">Sed euismod dolor eu</a>
@@ -586,28 +571,30 @@ function clearText(field)
       </div>
             <div class="col_2 no_margin_right">
 
-                <h2>Chalfal Chautari</h2>
+                <h2>परीक्षण टाइटल</h2>
           <div class="news_list">
-                    
-                    <span><img src="images/templatemo_image_01.jpg" alt="Client 1"  class="img_fl img_border img_border_s" /><a href="#">User 3</a>
+                    <span class="first"><img src="images/templatemo_image_03.jpg" alt="Client 3" class="img_fl img_border img_border_s" /><a href="#">Sed euismod dolor eu</a>
                     <p>Aliquam erat volutpat. Vestibulum urna libero, fringilla eu faucibus nec, fringilla eget elit.</p></span>
-                    <div class="clear" style="padding-bottom:3px"></div>
+                    <span class="second"><img src="images/templatemo_image_01.jpg" alt="Client 1"  class="img_fl img_border img_border_s" /><a href="#">Sed euismod dolor eu</a>
+                    <p>Aliquam erat volutpat. Vestibulum urna libero, fringilla eu faucibus nec, fringilla eget elit.</p></span>
+                  	<div class="clear"></div>
                 </div>           
                 <div class="news_list">
-                    <span><img src="images/templatemo_image_03.jpg" alt="Client 3" class="img_fl img_border img_border_s" /><a href="#">User 2</a>
+                    <span class="first"><img src="images/templatemo_image_03.jpg" alt="Client 3" class="img_fl img_border img_border_s" /><a href="#">Sed euismod dolor eu</a>
                     <p>Aliquam erat volutpat. Vestibulum urna libero, fringilla eu faucibus nec, fringilla eget elit.</p></span>
-                    
-                  <div class="clear" style="padding-bottom:3px"></div>
+                    <span class="second"><img src="images/templatemo_image_01.jpg" alt="Client 1"  class="img_fl img_border img_border_s" /><a href="#">Sed euismod dolor eu</a>
+                    <p>Aliquam erat volutpat. Vestibulum urna libero, fringilla eu faucibus nec, fringilla eget elit.</p></span>
+                  <div class="clear"></div>
                 </div>   
                  <div class="news_list">
-                    
-                    <span><img src="images/templatemo_image_01.jpg" alt="Client 1"  class="img_fl img_border img_border_s" /><a href="#">User 1</a>
+                    <span class="first"><img src="images/templatemo_image_03.jpg" alt="Client 3" class="img_fl img_border img_border_s" /><a href="#">Sed euismod dolor eu</a>
                     <p>Aliquam erat volutpat. Vestibulum urna libero, fringilla eu faucibus nec, fringilla eget elit.</p></span>
-                    <div class="clear" style="padding-bottom:3px"></div>
-                <a href="#" class="more" style="display:inline-block">More</a> 
-                <span style="padding-left:10px;padding-right:10px"><strong>Login Via</strong></span>
-                <a href="facebook.com" style="display:inline-block; padding-left:10px;padding-right:10px" ><img src="images/facebookimg.png" width="20" style="vertical-align:sub" /> Facebook</a>
-                <a href="gmail.com" style="display:inline-block; padding-left:10px;padding-right:10px" ><img src="images/gmailimg.png" width="20" style="vertical-align:sub"/> Gmail </a>
+                    <span class="second"><img src="images/templatemo_image_01.jpg" alt="Client 1"  class="img_fl img_border img_border_s" /><a href="#">Sed euismod dolor eu</a>
+                    <p>Aliquam erat volutpat. Vestibulum urna libero, fringilla eu faucibus nec, fringilla eget elit.</p></span>
+                    <div class="clear"></div>
+                </div>             
+                <div class="clear"></div>
+                <a href="#" class="more">More</a>
       </div>
     </div>
         <div class="clear"></div>
@@ -618,11 +605,11 @@ function clearText(field)
     <!-- ####################################################################################################### -->
 
 
-    <div id="templatemo_footer">
-        <div class="col_4">
-            <h4>Pages</h4>
+	<div id="templatemo_footer">
+    	<div class="col_4">
+        	<h4>Pages</h4>
             <ul class="nobullet bottom_list">
-                <li><a href="index.html">Home</a></li>
+            	<li><a href="index.html">Home</a></li>
                 <li><a href="news.html">News</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="about.html">About</a></li>
@@ -631,7 +618,7 @@ function clearText(field)
         </div>
         
         <div class="col_4">
-            <h4>Partners</h4>
+        	<h4>Partners</h4>
             <ul class="nobullet bottom_list">
                 <li><a href="#">Morbi eget lacus sem</a></li>
                 <li><a href="#">Vivamus dolor dolor</a></li>
@@ -642,9 +629,9 @@ function clearText(field)
         </div>
         
         <div class="col_4">
-            <h4>Links</h4>
+        	<h4>Links</h4>
             <ul class="nobullet bottom_list">
-                <li><a href="http://www.flashmo.com/page/1" rel="nofollow">Flash Templates</a></li>
+            	<li><a href="http://www.flashmo.com/page/1" rel="nofollow">Flash Templates</a></li>
                 <li><a href="#">Phasellus eget blandit</a></li>
                 <li><a href="#">Vestibulum laoreet</a></li>
                 <li><a href="#">Sed placerat est sit</a></li>
@@ -653,7 +640,7 @@ function clearText(field)
         </div>
         
         <div class="col_4 no_margin_right">
-            <h4>Facebook</h4>
+        	<h4>Facebook</h4>
             <p><iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FHakaHaki-Nefej%2F541441692631688%3Fref%3Dhl&amp;width&amp;layout=standard&amp;action=like&amp;show_faces=true&amp;share=false&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:80px;" allowTransparency="true"></iframe></p>
             
         </div>
