@@ -57,13 +57,31 @@
     var _CaptionTransitions = [];
     
 
-    var options = { $AutoPlay: true,
+    var options = { 
+
+      $AutoPlay: true,
+      
       $CaptionSliderOptions: {
         $Class: $JssorCaptionSlider$,
         $CaptionTransitions: _CaptionTransitions,
         $PlayInMode: 1,
         $PlayOutMode: 2
-      } 
+      } ,
+
+      $ThumbnailNavigatorOptions: {
+        $Class: $JssorThumbnailNavigator$,              //[Required] Class to create thumbnail navigator instance
+        $ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
+
+        $Loop: 2,                                       //[Optional] Enable loop(circular) of carousel or not, 0: stop, 1: loop, 2 rewind, default value is 1
+        $AutoCenter: 3,                                 //[Optional] Auto center thumbnail items in the thumbnail navigator container, 0 None, 1 Horizontal, 2 Vertical, 3 Both, default value is 3
+        $Lanes: 1,                                      //[Optional] Specify lanes to arrange thumbnails, default value is 1
+        $SpacingX: 4,                                   //[Optional] Horizontal space between each thumbnail in pixel, default value is 0
+        $SpacingY: 4,                                   //[Optional] Vertical space between each thumbnail in pixel, default value is 0
+        $DisplayPieces: 4,                              //[Optional] Number of pieces to display, default value is 1
+        $ParkingPosition: 0,                            //[Optional] The offset position to park thumbnail
+        $Orientation: 2,                                //[Optional] Orientation to arrange thumbnails, 1 horizental, 2 vertical, default value is 1
+        $DisableDrag: false                             //[Optional] Disable drag or not, default value is false
+      }
     };        
 
     var jssor_slider1 = new $JssorSlider$('slider1_container', options);
@@ -93,20 +111,20 @@
 
     }).trigger('click');
 */
-    $(".pdf").click(function(){
-     $.fancybox({
-       width:"100%",
-       type: 'html',
-       autoSize: false,
-       content: '<embed src="'+this.href+'#nameddest=self&page=1&view=FitH,0&zoom=80,0,0" type="text/html" height="99%" width="100%" />',
-       beforeClose: function() {
-         $(".fancybox-inner").unwrap();
-       }
+$(".pdf").click(function(){
+ $.fancybox({
+   width:"100%",
+   type: 'html',
+   autoSize: false,
+   content: '<embed src="'+this.href+'#nameddest=self&page=1&view=FitH,0&zoom=80,0,0" type="text/html" height="99%" width="100%" />',
+   beforeClose: function() {
+     $(".fancybox-inner").unwrap();
+   }
          }); //fancybox
-     return false;
-   });
+ return false;
+});
 
-  });
+});
 
 </script>
 
@@ -227,260 +245,375 @@
 
   <div id="slider1_container" style="position: relative; top: 0px; left: 0px; width: 980px; height: 280px; padding-bottom:22px;background-color:#1C1314">
     <!-- Slides Container -->
-    <div u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 20px; top: 20px; width: 940px; height: 262px;">
+    <div u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 20px; top: 20px; width: 660px ; height: 262px;">
       <div>
         <img u="image" src="images/slider/004.jpg" />
-        <div u="caption" t="NO" style="position: absolute; top: 200px; left: 0px; width: 940px;height: 70px; color:#FFFFFF; background:#000000; opacity:0.4; text-align:center" >
+        <div u="caption" t="NO" style="position: absolute; top: 200px; left: 0px; width: 660px;height: 70px; color:#FFFFFF; background:#000000; opacity:0.4; text-align:center" >
           <strong>This is a test Caption two</strong>
+        </div>
+        <div u="thumb">
+          <div class="t">Title 1</div>
+          <div class="c">This is test description 1</div>
         </div>
       </div>
       
       <div>
         <img u="image" src="images/slider/003.jpg" />
-        <div u="caption" t="NO" style="position: absolute; top: 200px; left: 0px; width: 940px;height: 70px; color:#FFFFFF; background:#000000; opacity:0.4; text-align:center">
+        <div u="caption" t="NO" style="position: absolute; top: 200px; left: 0px; width: 660px;height: 70px; color:#FFFFFF; background:#000000; opacity:0.4; text-align:center">
           <strong>This is a test Caption three</strong>
+        </div>
+        <div u="thumb">
+          <div class="t">Title 2</div>
+          <div class="c">This is test description 2</div>
         </div>
       </div>
       <div>
         <img u="image" src="images/slider/001.jpg" />
-        <div u="caption" t="NO" style="position: absolute; top: 200px; left: 0px; width: 940px;height: 70px; color:#FFFFFF; background:#000000; opacity:0.4; text-align:center" >
+        <div u="caption" t="NO" style="position: absolute; top: 200px; left: 0px; width: 660px;height: 70px; color:#FFFFFF; background:#000000; opacity:0.4; text-align:center" >
           <strong>This is a test Caption four</strong>
+        </div>
+        <div u="thumb">
+          <div class="t">Title 3</div>
+          <div class="c">This is test description 3</div>
         </div>
       </div>
       <div>
         <img u="image" src="images/slider/002.jpg" />
-        <div u="caption" t="NO" style="position: absolute; top: 200px; left: 0px; width: 940px;height: 70px; color:#FFFFFF; background:#000000; opacity:0.4; text-align:center">
+        <div u="caption" t="NO" style="position: absolute; top: 200px; left: 0px; width: 660px;height: 70px; color:#FFFFFF; background:#000000; opacity:0.4; text-align:center">
           <strong>This is a test Caption</strong> 
+        </div>
+        <div u="thumb">
+          <div class="t">Title 4</div>
+          <div class="c">This is test description 4</div>
         </div>
       </div>
     </div>
+
+    <div u="thumbnavigator" class="jssort11" style="position: absolute; width: 200px; height: 300px; left:725px; top:0px;">
+      <!-- Thumbnail Item Skin Begin -->
+      <style>
+        /* jssor slider thumbnail navigator skin 11 css */
+        /*
+        .jssort11 .p            (normal)
+        .jssort11 .p:hover      (normal mouseover)
+        .jssort11 .pav          (active)
+        .jssort11 .pav:hover    (active mouseover)
+        .jssort11 .pdn          (mousedown)
+        */
+        .jssort11
+        {
+          font-family: Arial, Helvetica, sans-serif;
+        }
+        .jssort11 .i, .jssort11 .pav:hover .i
+        {
+          position: absolute;
+          top:3px;
+          WIDTH: 60px;
+          HEIGHT: 30px;
+          border: white 1px dashed;
+        }
+        * html .jssort11 .i
+        {
+          WIDTH /**/: 62px;
+          HEIGHT /**/: 32px;
+        }
+        .jssort11 .pav .i
+        {
+          border: white 1px solid;
+        }
+        .jssort11 .t, .jssort11 .pav:hover .t
+        {
+          position: absolute;
+          top: 3px;
+          width:129px;
+          height: 32px;
+          line-height:32px;
+          color:#fc9835;
+          font-size:13px;
+          font-weight:700;
+        }
+        .jssort11 .pav .t, .jssort11 .phv .t, .jssort11 .p:hover .t
+        {
+          color:#fff;
+        }
+        .jssort11 .c, .jssort11 .pav:hover .c
+        {
+          position: absolute;
+          top: 38px;
+          width:197px;
+          height: 31px;
+          line-height:31px;
+          color:#fff;
+          font-size:11px;
+          font-weight:400;
+          overflow: hidden;
+        }
+        .jssort11 .pav .c, .jssort11 .phv .c, .jssort11 .p:hover .c
+        {
+          color:#fc9835;
+        }
+        .jssort11 .t, .jssort11 .c
+        {
+          transition: color 2s;
+          -moz-transition: color 2s;
+          -webkit-transition: color 2s;
+          -o-transition: color 2s;
+          left: 10px;
+        }
+        .jssort11 .p:hover .t, .jssort11 .phv .t, .jssort11 .pav:hover .t, .jssort11 .p:hover .c, .jssort11 .phv .c, .jssort11 .pav:hover .c
+        {
+          transition: none;
+          -moz-transition: none;
+          -webkit-transition: none;
+          -o-transition: none;
+        }
+        .jssort11 .p
+        {
+          background:#181818;
+        }
+        .jssort11 .pav, .jssort11 .pdn
+        {
+          background:#462300;
+        }
+        .jssort11 .p:hover, .jssort11 .phv, .jssort11 .pav:hover
+        {
+          background:#333;
+        }
+      </style>
+      <div u="slides" style="cursor: move;">
+        <div u="prototype" class="p" style="position: absolute; width: 275px; height: 62px; top: 0; left: 0;">
+          <thumbnailtemplate style=" width: 100%; height: 100%; border: none;position:absolute; top: 0; left: 0;"></thumbnailtemplate>
+        </div>
+      </div>
+      <!-- Thumbnail Item Skin End -->
+    </div>
   </div>
-<div id="templatemo_main" style="margin:auto; width:900px; padding-top:0px">
-  <div class="content_wrapper content_mb_30">
-    <div class="col_3 service_home" style="padding-top:30px">
-      <div align="center"><img src="images/tathya_thatyanka.png" width="186" height="48" />
+  <div id="templatemo_main" style="margin:auto; width:900px; padding-top:0px">
+    <div class="content_wrapper content_mb_30">
+      <div class="col_3 service_home" style="padding-top:30px">
+        <div align="center"><img src="images/tathya_thatyanka.png" width="186" height="48" />
+        </div>
+        <p>परीक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परीक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परीक्षण शब्द</p>
+
+        <p align="right" class="readmore"><a href="thathya_thatyanka.html">पूरा पढ्नुहोस् &raquo;</a></p>
+
+
       </div>
-      <p>परीक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परीक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परीक्षण शब्द</p>
+      <div class="col_3 service_home" style="padding-top:30px">
+        <div align="center"><img src="images/janata_sarokar.png" width="229" height="48" />
+        </div>
+        <p>परीक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परीक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परीक्षण शब्द</p>
 
-      <p align="right" class="readmore"><a href="thathya_thatyanka.html">पूरा पढ्नुहोस् &raquo;</a></p>
+        <p align="right" class="readmore"><a href="janata_sarokar.html">पूरा पढ्नुहोस् &raquo;</a></p>
 
-
-    </div>
-    <div class="col_3 service_home" style="padding-top:30px">
-      <div align="center"><img src="images/janata_sarokar.png" width="229" height="48" />
       </div>
-      <p>परीक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परीक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परीक्षण शब्द</p>
+      <div class="col_3 no_margin_right service_home" style="padding-top:30px; padding-right:10px; padding-left:10px; background-color:#3CB2D0; color:#FFFFFF">
+        <div align="center"><img src="images/face-to-face-edition.png" width="270" height="48" />             </div>
+        <p>Demo Text will update. Demo Text will update. Demo Text will update. Demo Text will update. Demo Text will update.</p>
 
-      <p align="right" class="readmore"><a href="janata_sarokar.html">पूरा पढ्नुहोस् &raquo;</a></p>
+        <p align="right" class="readmore" ><a href="face-to-face-edition.html" style="color:#000000">Read More&raquo;</a></p>
 
-    </div>
-    <div class="col_3 no_margin_right service_home" style="padding-top:30px; padding-right:10px; padding-left:10px; background-color:#3CB2D0; color:#FFFFFF">
-      <div align="center"><img src="images/face-to-face-edition.png" width="270" height="48" />             </div>
-      <p>Demo Text will update. Demo Text will update. Demo Text will update. Demo Text will update. Demo Text will update.</p>
-
-      <p align="right" class="readmore" ><a href="face-to-face-edition.html" style="color:#000000">Read More&raquo;</a></p>
-
-    </div>
-    <div class="col_3 service_home">
-      <div align="center"><img src="images/janata_bhanai.png" width="186" height="48" />
       </div>
-      <p>परीक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परीक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परीक्षण शब्द</p>
+      <div class="col_3 service_home">
+        <div align="center"><img src="images/janata_bhanai.png" width="186" height="48" />
+        </div>
+        <p>परीक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परीक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परीक्षण शब्द</p>
 
-      <p align="right" class="readmore"><a href="janata_bhanai.html">पूरा पढ्नुहोस् &raquo;</a></p>
+        <p align="right" class="readmore"><a href="janata_bhanai.html">पूरा पढ्नुहोस् &raquo;</a></p>
 
 
-    </div>
-    <div class="col_3 service_home">
-      <div align="center"><img src="images/janata_sarokar.png" width="229" height="48" />
       </div>
-      <p>परीक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परीक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परीक्षण शब्द</p>
+      <div class="col_3 service_home">
+        <div align="center"><img src="images/janata_sarokar.png" width="229" height="48" />
+        </div>
+        <p>परीक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परीक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परीक्षण शब्द</p>
 
-      <p align="right" class="readmore"><a href="janata_sarokar.html">पूरा पढ्नुहोस् &raquo;</a></p>
+        <p align="right" class="readmore"><a href="janata_sarokar.html">पूरा पढ्नुहोस् &raquo;</a></p>
 
 
-    </div>
-    <div class="col_3 no_margin_right service_home">
-      <div align="center"><img src="images/janata_bhanai.png" alt="Image" />
       </div>
-      <p>परीक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परीक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परीक्षण शब्द</p>
+      <div class="col_3 no_margin_right service_home">
+        <div align="center"><img src="images/janata_bhanai.png" alt="Image" />
+        </div>
+        <p>परीक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परीक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परीक्षण शब्द</p>
 
-      <p align="right" class="readmore"><a href="janata_bhanai.html">पूरा पढ्नुहोस् &raquo;</a></p>
+        <p align="right" class="readmore"><a href="janata_bhanai.html">पूरा पढ्नुहोस् &raquo;</a></p>
 
+      </div>
     </div>
-  </div>
-  <!-- ####################################################################################################### -->
-  <div class="wrapper">
-    <div class="container">
-      <div class="content">
-        <div id="hpage_latest">
+    <!-- ####################################################################################################### -->
+    <div class="wrapper">
+      <div class="container">
+        <div class="content">
+          <div id="hpage_latest">
 
-          <ul>
+            <ul>
 
-            <li><img src="images/190x130.gif" alt="" />
+              <li><img src="images/190x130.gif" alt="" />
 
-              <p><span class="style3">परीक्षण टाइटल परिक्षण टाइटल परिक्षण टाइटल परिक्षण टाइटल परिक्षण टाइटल</span><br /> 
-                परिक्षण शब्द परीक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण<br /> 
-                <p>शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्दपरीक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण<br />
-                  <p>शब्द परीक्षण शब्द परिक्षण शब्द परिक्षण</p>
-                  <p class="readmore"><a href="#">पूरा पढ्नुहोस् &raquo;</a></p>
-                </li>
-                <li><img src="images/190x130.gif" alt="" />
-                  <p><span class="style3">परीक्षण टाइटल परिक्षण टाइटल परिक्षण टाइटल परिक्षण टाइटल परिक्षण टाइटल</span><br />
-                    परिक्षण शब्द परीक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण<br />
-                  </p>
+                <p><span class="style3">परीक्षण टाइटल परिक्षण टाइटल परिक्षण टाइटल परिक्षण टाइटल परिक्षण टाइटल</span><br /> 
+                  परिक्षण शब्द परीक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण<br /> 
                   <p>शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्दपरीक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण<br />
-                  </p>
-                  <p>शब्द परीक्षण शब्द परिक्षण शब्द परिक्षण</p>
-                  <p class="readmore"><a href="#">पूरा पढ्नुहोस् &raquo;</a></p>
-                </li>
-              </ul>
-              <br class="clear" />
+                    <p>शब्द परीक्षण शब्द परिक्षण शब्द परिक्षण</p>
+                    <p class="readmore"><a href="#">पूरा पढ्नुहोस् &raquo;</a></p>
+                  </li>
+                  <li><img src="images/190x130.gif" alt="" />
+                    <p><span class="style3">परीक्षण टाइटल परिक्षण टाइटल परिक्षण टाइटल परिक्षण टाइटल परिक्षण टाइटल</span><br />
+                      परिक्षण शब्द परीक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण<br />
+                    </p>
+                    <p>शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्दपरीक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण शब्द परिक्षण<br />
+                    </p>
+                    <p>शब्द परीक्षण शब्द परिक्षण शब्द परिक्षण</p>
+                    <p class="readmore"><a href="#">पूरा पढ्नुहोस् &raquo;</a></p>
+                  </li>
+                </ul>
+                <br class="clear" />
+              </div>
             </div>
-          </div>
-          <div class="content">
-            <div id="hpage_latest">
-              <ul>
+            <div class="content">
+              <div id="hpage_latest">
+                <ul>
 
-                <li><a class="pdf" href="pdf/sample.pdf"><img src="images/e-paper - haka-haki.png" width="190" height="55" /><img src="images/haka-haki-front.png" /></a>
-                  <p class="readmore"><a href="hakahaki_pdf.html">थप पढ्नुहोस् &raquo;</a></p>
-                </li>
+                  <li><a class="pdf" href="pdf/sample.pdf"><img src="images/e-paper - haka-haki.png" width="190" height="55" /><img src="images/haka-haki-front.png" /></a>
+                    <p class="readmore"><a href="hakahaki_pdf.html">थप पढ्नुहोस् &raquo;</a></p>
+                  </li>
 
-                <li><a class="pdf" href="pdf/sample.pdf"><img src="images/e-paper - face-to-face.png" width="190" height="55" /><img src="images/face-2-face-front.png" /></a>
-                  <p class="readmore"><a href="face-to-face_pdf.html">Read More &raquo;</a></p>
-                </li>
-              </ul>
-              <br class="clear" />
+                  <li><a class="pdf" href="pdf/sample.pdf"><img src="images/e-paper - face-to-face.png" width="190" height="55" /><img src="images/face-2-face-front.png" /></a>
+                    <p class="readmore"><a href="face-to-face_pdf.html">Read More &raquo;</a></p>
+                  </li>
+                </ul>
+                <br class="clear" />
+              </div>
             </div>
-          </div>
-          <div id="hpage_cats">
-            <div class="fl_left"><br />
-              <img src="images/100x100.gif" alt="" />
-              <h2>
-                <p><a href="#">परीक्षण टाइटल</a></p>
-              </h2>
-              <p>This is a W3C standards compliant free website template from <a href="http://www.os-templates.com/">OS Templates</a>. For more CSS templates visit <a href="http://www.os-templates.com/">Free Website Templates</a>. Condimentumfelis et amet tellent quisquet a leo lacus nec augue accumsan sagittislaorem dolor sum at urna.</p>
+            <div id="hpage_cats">
+              <div class="fl_left"><br />
+                <img src="images/100x100.gif" alt="" />
+                <h2>
+                  <p><a href="#">परीक्षण टाइटल</a></p>
+                </h2>
+                <p>This is a W3C standards compliant free website template from <a href="http://www.os-templates.com/">OS Templates</a>. For more CSS templates visit <a href="http://www.os-templates.com/">Free Website Templates</a>. Condimentumfelis et amet tellent quisquet a leo lacus nec augue accumsan sagittislaorem dolor sum at urna.</p>
+              </div>
+              <div class="column">
+              </div>
+              <div class="fl_left"><br />
+                <img src="images/100x100.gif" alt="" />
+                <h2><p><a href="#">परीक्षण टाइटल</a></p>
+                </h2>
+                <p>This is a W3C standards compliant free website template from <a href="http://www.os-templates.com/">OS Templates</a>. For more CSS templates visit <a href="http://www.os-templates.com/">Free Website Templates</a>. Condimentumfelis et amet tellent quisquet a leo lacus nec augue accumsan sagittislaorem dolor sum at urna.</p>
+              </div>
             </div>
-            <div class="column">
-            </div>
-            <div class="fl_left"><br />
-              <img src="images/100x100.gif" alt="" />
-              <h2><p><a href="#">परीक्षण टाइटल</a></p>
-              </h2>
-              <p>This is a W3C standards compliant free website template from <a href="http://www.os-templates.com/">OS Templates</a>. For more CSS templates visit <a href="http://www.os-templates.com/">Free Website Templates</a>. Condimentumfelis et amet tellent quisquet a leo lacus nec augue accumsan sagittislaorem dolor sum at urna.</p>
-            </div>
-          </div>
 
 
-          <!-- ####################################################################################################### -->
-          <div class="col_2 no_margin_right">
+            <!-- ####################################################################################################### -->
+            <div class="col_2 no_margin_right">
 
-            <h2>हाका-हाकी प्रतिक्रिया</h2>
-            <div class="news_list">
-              <span class="first"><img src="images/templatemo_image_03.jpg" alt="Client 3" class="img_fl img_border img_border_s" /><a href="#">Sed euismod dolor eu</a>
-                <p>Aliquam erat volutpat. Vestibulum urna libero, fringilla eu faucibus nec, fringilla eget elit.</p></span>
-                <span class="second"><img src="images/templatemo_image_01.jpg" alt="Client 1"  class="img_fl img_border img_border_s" /><a href="#">Sed euismod dolor eu</a>
+              <h2>हाका-हाकी प्रतिक्रिया</h2>
+              <div class="news_list">
+                <span class="first"><img src="images/templatemo_image_03.jpg" alt="Client 3" class="img_fl img_border img_border_s" /><a href="#">Sed euismod dolor eu</a>
                   <p>Aliquam erat volutpat. Vestibulum urna libero, fringilla eu faucibus nec, fringilla eget elit.</p></span>
-                  <div class="clear"></div>
-                </div>           
-                <div class="news_list">
-                  <span class="first"><img src="images/templatemo_image_03.jpg" alt="Client 3" class="img_fl img_border img_border_s" /><a href="#">Sed euismod dolor eu</a>
+                  <span class="second"><img src="images/templatemo_image_01.jpg" alt="Client 1"  class="img_fl img_border img_border_s" /><a href="#">Sed euismod dolor eu</a>
                     <p>Aliquam erat volutpat. Vestibulum urna libero, fringilla eu faucibus nec, fringilla eget elit.</p></span>
-                    <span class="second"><img src="images/templatemo_image_01.jpg" alt="Client 1"  class="img_fl img_border img_border_s" /><a href="#">Sed euismod dolor eu</a>
+                    <div class="clear"></div>
+                  </div>           
+                  <div class="news_list">
+                    <span class="first"><img src="images/templatemo_image_03.jpg" alt="Client 3" class="img_fl img_border img_border_s" /><a href="#">Sed euismod dolor eu</a>
                       <p>Aliquam erat volutpat. Vestibulum urna libero, fringilla eu faucibus nec, fringilla eget elit.</p></span>
-                      <div class="clear"></div>
-                    </div>   
-                    <div class="news_list">
-                      <span class="first"><img src="images/templatemo_image_03.jpg" alt="Client 3" class="img_fl img_border img_border_s" /><a href="#">Sed euismod dolor eu</a>
+                      <span class="second"><img src="images/templatemo_image_01.jpg" alt="Client 1"  class="img_fl img_border img_border_s" /><a href="#">Sed euismod dolor eu</a>
                         <p>Aliquam erat volutpat. Vestibulum urna libero, fringilla eu faucibus nec, fringilla eget elit.</p></span>
-                        <span class="second"><img src="images/templatemo_image_01.jpg" alt="Client 1"  class="img_fl img_border img_border_s" /><a href="#">Sed euismod dolor eu</a>
-                          <p>Aliquam erat volutpat. Vestibulum urna libero, fringilla eu faucibus nec, fringilla eget elit.</p></span>
-
-                          <div class="clear"></div>
-                        </div>               
                         <div class="clear"></div>
-                        <a href="testimonials.html" class="more">More</a>
-                      </div>
-                      <div class="col_2 no_margin_right">
-
-                        <h2>Chalfal Chautari</h2>
-                        <div class="news_list">
-
-                          <span><img src="images/templatemo_image_01.jpg" alt="Client 1"  class="img_fl img_border img_border_s" /><a href="#">User 3</a>
+                      </div>   
+                      <div class="news_list">
+                        <span class="first"><img src="images/templatemo_image_03.jpg" alt="Client 3" class="img_fl img_border img_border_s" /><a href="#">Sed euismod dolor eu</a>
+                          <p>Aliquam erat volutpat. Vestibulum urna libero, fringilla eu faucibus nec, fringilla eget elit.</p></span>
+                          <span class="second"><img src="images/templatemo_image_01.jpg" alt="Client 1"  class="img_fl img_border img_border_s" /><a href="#">Sed euismod dolor eu</a>
                             <p>Aliquam erat volutpat. Vestibulum urna libero, fringilla eu faucibus nec, fringilla eget elit.</p></span>
-                            <div class="clear" style="padding-bottom:3px"></div>
-                          </div>           
+
+                            <div class="clear"></div>
+                          </div>               
+                          <div class="clear"></div>
+                          <a href="testimonials.html" class="more">More</a>
+                        </div>
+                        <div class="col_2 no_margin_right">
+
+                          <h2>Chalfal Chautari</h2>
                           <div class="news_list">
-                            <span><img src="images/templatemo_image_03.jpg" alt="Client 3" class="img_fl img_border img_border_s" /><a href="#">User 2</a>
+
+                            <span><img src="images/templatemo_image_01.jpg" alt="Client 1"  class="img_fl img_border img_border_s" /><a href="#">User 3</a>
                               <p>Aliquam erat volutpat. Vestibulum urna libero, fringilla eu faucibus nec, fringilla eget elit.</p></span>
-
                               <div class="clear" style="padding-bottom:3px"></div>
-                            </div>   
+                            </div>           
                             <div class="news_list">
-
-                              <span><img src="images/templatemo_image_01.jpg" alt="Client 1"  class="img_fl img_border img_border_s" /><a href="#">User 1</a>
+                              <span><img src="images/templatemo_image_03.jpg" alt="Client 3" class="img_fl img_border img_border_s" /><a href="#">User 2</a>
                                 <p>Aliquam erat volutpat. Vestibulum urna libero, fringilla eu faucibus nec, fringilla eget elit.</p></span>
-                                <div class="clear"></div>
-                              </div>             
-                              <div class="clear" style="padding-bottom:3px"></div>
-                              <a href="#" class="more" style="display:inline-block">More</a> 
-                              <span style="padding-left:10px;padding-right:10px"><strong>Login Via</strong></span>
-                              <a href="facebook.com" style="display:inline-block; padding-left:10px;padding-right:10px" ><img src="images/facebookimg.png" width="20" style="vertical-align:sub" /> Facebook</a>
-                              <a href="gmail.com" style="display:inline-block; padding-left:10px;padding-right:10px" ><img src="images/gmailimg.png" width="20" style="vertical-align:sub"/> Gmail </a>
+
+                                <div class="clear" style="padding-bottom:3px"></div>
+                              </div>   
+                              <div class="news_list">
+
+                                <span><img src="images/templatemo_image_01.jpg" alt="Client 1"  class="img_fl img_border img_border_s" /><a href="#">User 1</a>
+                                  <p>Aliquam erat volutpat. Vestibulum urna libero, fringilla eu faucibus nec, fringilla eget elit.</p></span>
+                                  <div class="clear"></div>
+                                </div>             
+                                <div class="clear" style="padding-bottom:3px"></div>
+                                <a href="#" class="more" style="display:inline-block">More</a> 
+                                <span style="padding-left:10px;padding-right:10px"><strong>Login Via</strong></span>
+                                <a href="facebook.com" style="display:inline-block; padding-left:10px;padding-right:10px" ><img src="images/facebookimg.png" width="20" style="vertical-align:sub" /> Facebook</a>
+                                <a href="gmail.com" style="display:inline-block; padding-left:10px;padding-right:10px" ><img src="images/gmailimg.png" width="20" style="vertical-align:sub"/> Gmail </a>
+                              </div>
                             </div>
+                            <div class="clear"></div>
+                          </div>
+                        </div>
+
+
+                        <!-- ####################################################################################################### -->
+
+
+                        <div id="templatemo_footer">
+                          <div class="col_4">
+                            <h4>Pages</h4>
+                            <ul class="nobullet bottom_list">
+                              <li><a href="index.html">Home</a></li>
+                              <li><a href="news.html">News</a></li>
+                              <li><a href="gallery.html">Gallery</a></li>
+                              <li><a href="about.html">About</a></li>
+                              <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                          </div>
+
+                          <div class="col_4">
+                            <h4>Partners</h4>
+                            <ul class="nobullet bottom_list">
+                              <li><a href="#">Morbi eget lacus sem</a></li>
+                              <li><a href="#">Vivamus dolor dolor</a></li>
+                              <li><a href="#">Nunc auctor viverra</a></li>
+                              <li><a href="#">Phasellus eget blandit</a></li>
+                              <li><a href="#">Sed id tincidunt ipsum</a></li>
+                            </ul>
+                          </div>
+
+                          <div class="col_4">
+                            <h4>Links</h4>
+                            <ul class="nobullet bottom_list">
+                              <li><a href="http://www.flashmo.com/page/1" rel="nofollow">Flash Templates</a></li>
+                              <li><a href="#">Phasellus eget blandit</a></li>
+                              <li><a href="#">Vestibulum laoreet</a></li>
+                              <li><a href="#">Sed placerat est sit</a></li>
+                              <li><a href="#">Class aptent taciti</a></li>
+                            </ul>
+                          </div>
+
+                          <div class="col_4 no_margin_right">
+                            <h4>Facebook</h4>
+                            <p><iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FHakaHaki-Nefej%2F541441692631688%3Fref%3Dhl&amp;width&amp;layout=standard&amp;action=like&amp;show_faces=true&amp;share=false&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:80px;" allowTransparency="true"></iframe></p>
+
                           </div>
                           <div class="clear"></div>
+                        </div> <!-- END of templatemo_footer -->
+                      </div> <!-- END of templatemo_wrapper -->
+                      <div id="templatemo_copyright_wrapper">
+                        <div id="templatemo_copyright">
+                          सर्वाधिकार © २०००-२०७१ <a href="#">नेपाल वातावरण पत्रकार समूह (NEFEJ)</a> |  वेबसाइट सृजनाः <a href="http://www.thedigiMed.net" target="_blank">DigiMed</a></div>
                         </div>
-                      </div>
-
-
-                      <!-- ####################################################################################################### -->
-
-
-                      <div id="templatemo_footer">
-                        <div class="col_4">
-                          <h4>Pages</h4>
-                          <ul class="nobullet bottom_list">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="news.html">News</a></li>
-                            <li><a href="gallery.html">Gallery</a></li>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="contact.html">Contact</a></li>
-                          </ul>
-                        </div>
-
-                        <div class="col_4">
-                          <h4>Partners</h4>
-                          <ul class="nobullet bottom_list">
-                            <li><a href="#">Morbi eget lacus sem</a></li>
-                            <li><a href="#">Vivamus dolor dolor</a></li>
-                            <li><a href="#">Nunc auctor viverra</a></li>
-                            <li><a href="#">Phasellus eget blandit</a></li>
-                            <li><a href="#">Sed id tincidunt ipsum</a></li>
-                          </ul>
-                        </div>
-
-                        <div class="col_4">
-                          <h4>Links</h4>
-                          <ul class="nobullet bottom_list">
-                            <li><a href="http://www.flashmo.com/page/1" rel="nofollow">Flash Templates</a></li>
-                            <li><a href="#">Phasellus eget blandit</a></li>
-                            <li><a href="#">Vestibulum laoreet</a></li>
-                            <li><a href="#">Sed placerat est sit</a></li>
-                            <li><a href="#">Class aptent taciti</a></li>
-                          </ul>
-                        </div>
-
-                        <div class="col_4 no_margin_right">
-                          <h4>Facebook</h4>
-                          <p><iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FHakaHaki-Nefej%2F541441692631688%3Fref%3Dhl&amp;width&amp;layout=standard&amp;action=like&amp;show_faces=true&amp;share=false&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:80px;" allowTransparency="true"></iframe></p>
-
-                        </div>
-                        <div class="clear"></div>
-                      </div> <!-- END of templatemo_footer -->
-                    </div> <!-- END of templatemo_wrapper -->
-                    <div id="templatemo_copyright_wrapper">
-                      <div id="templatemo_copyright">
-                        सर्वाधिकार © २०००-२०७१ <a href="#">नेपाल वातावरण पत्रकार समूह (NEFEJ)</a> |  वेबसाइट सृजनाः <a href="http://www.thedigiMed.net" target="_blank">DigiMed</a></div>
-                      </div>
-                    </body>
-                    </html>
+                      </body>
+                      </html>
